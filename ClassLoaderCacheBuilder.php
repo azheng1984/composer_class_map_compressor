@@ -1,6 +1,7 @@
 <?php
 namespace Hyperframework;
 
+//todo check folder is namespace
 class ClassLoaderCacheBuilder {
     private static $classMap = array();
     private static $psr4Cache = array();
@@ -532,7 +533,7 @@ class ClassLoaderCacheBuilder {
             if (substr($path, -1) !== DIRECTORY_SEPARATOR) {
                 $path .= DIRECTORY_SEPARATOR;
             }
-            $path = $path . $entry;
+            $path = $path . $entry; //todo bug!!
             if ($namespace !== '') {
                 $namespace .= '\\';
             }
